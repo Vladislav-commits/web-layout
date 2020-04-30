@@ -629,6 +629,16 @@ font-size: 12px;
 color: #bbbbbb;
 text-align: center;
 }
+.a{
+width: 270px;
+height: 60px;
+background-color: #3a63c2;
+border:none;
+color: white;
+text-align: center;
+font-size: 18px;
+font-weight: 400;
+}
 @media (max-width: 1365px){
 .first-screen-container__dude-block{
 position: static;

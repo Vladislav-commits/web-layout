@@ -123,7 +123,7 @@ $('input[type="tel"]').inputmask({"mask": "+7 (999) 999-99-99"});
 
 
 
-$('.red-button, .white-button').on('click', function(){
+$('.red-button, .white-button, .header-container__phone-icon').on('click', function(){
 $('body').addClass('scroll-hidden')
 $('.form-bg').animate({
   height:'100%',
@@ -149,8 +149,37 @@ $('form').animate({
   height: '0',
 },400)
 $('form').css('visibility', 'hidden')
-$('body').removeClass('scroll-hidden')
+$('body').removeClass('scroll-hidden');
+
 })
+
+
+
+			$('form').each(function () {
+				$(this).validate({
+					errorPlacement(error, element) {
+						return true;
+					},
+					
+					submitHandler(form) {
+					let th = $(form);
+
+					$.ajax({
+					type: 'POST',
+					url: 'scripts/mail.php',
+					data: th.serialize(),
+					// eslint-disable-next-line func-names
+				}).done(() => {
+					console.log("Отправлено")
+
+					th.trigger('reset');
+				});
+
+				return false;
+				}
+			});
+			});
+
 
 
 })

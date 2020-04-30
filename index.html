@@ -42,7 +42,7 @@
 					<a class="ancor" href=".gradient-box">Стоимость</a>
 				</nav>
 				<div class="header-container__phone-number"><a href="tel:+79143493969">+7 (914) 349-39-69</a></div>
-				<div class="header-container__phone-icon"></div>
+				<div class="header-container__phone-icon" value='Заказать звонок'></div>
 				<input class="header-container__button white-button" type="button" name="button" value="Заказать звонок">
 			</div>
 		</header>
@@ -166,6 +166,9 @@
 		</div>
 		<div class="form-bg"></div>
 		<form class="form">
+			<input type="hidden" name="project_name" value="Тест">
+			<input type="hidden" name="admin_email" value="vlad1998.02.26@mail.ru">
+			<input type="hidden" name="form_subject" value="Тема">
 			<img class="form__img" src="img/cross1.gif" alt="cross">
 			<h1>Оставьте свои контакты</h1>
 			<label class="form__input">
@@ -178,14 +181,15 @@
 			</label>
 			<label class="form__input E-man">
 				<span>Ваш E-mail</span>
-				<input required="" type="email" name="Е-мэн" placeholder="">
+				<input  type="email" name="Е-мэн" placeholder="">
 			</label>
-			<input style="margin: 0 auto;" class="a red-button" type="submit" name="but" value="Получить предложение" >
+			<input style="margin: 0 auto;" class="a" type="submit" name="but" value="Получить предложение" >
 			<div class="form__div_small"><input required="" type="checkbox" name="but">Нажатием на&nbsp;кнопку я&nbsp;даю своё согласие на&nbsp;обработку персональных данных в&nbsp;соответствии с&nbsp;указанными здесь условиями</div>
 		</form>
 		<script src="scripts/jquery-3.4.1.min.js" ></script>
 		<script src="scripts/swiper.min.js"></script>
 		<script src="scripts/jquery.inputmask.min.js"></script>
+		<script src="scripts/jquery.validate.min.js"></script>
 		<script src="scripts/script.js"></script>
 	</body>
 	</html>
